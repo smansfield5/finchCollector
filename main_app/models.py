@@ -24,6 +24,7 @@ class Finch(models.Model):
     color = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     age = models.IntegerField()
+    toys = models.ManyToManyField(Toy)
 
     def __str__(self):
         return self.name
